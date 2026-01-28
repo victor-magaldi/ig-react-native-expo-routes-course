@@ -11,7 +11,7 @@ export default function Signup() {
 
       <TouchableOpacity style={styles.button} onPress={() => { router.back() }} >
         <Text style={styles.label}>
-          Navegar sem tag Link
+          Voltar sem Tag link
         </Text>
       </TouchableOpacity>
     </View>
