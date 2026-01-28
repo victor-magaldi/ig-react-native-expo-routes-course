@@ -1,5 +1,5 @@
-import { Link } from "expo-router"
-import { StyleSheet, Text, View } from "react-native"
+import { Link, router } from "expo-router"
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Signup() {
   return (
@@ -8,6 +8,12 @@ export default function Signup() {
       <Link href={'./'}>
         Voltar
       </Link>
+
+      <TouchableOpacity style={styles.button} onPress={() => { router.back() }} >
+        <Text style={styles.label}>
+          Navegar sem tag Link
+        </Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -19,4 +25,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: { fontSize: 22, fontWeight: "bold" },
+  label: { fontSize: 16, fontWeight: "bold", color: "#FFF" },
+  button: {
+    backgroundColor: "#000",
+    paddingHorizontal: 32,
+    paddingVertical: 10,
+    borderRadius: 10
+  }
 })

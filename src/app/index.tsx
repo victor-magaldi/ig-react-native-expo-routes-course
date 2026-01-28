@@ -2,7 +2,7 @@ import { Link, router } from "expo-router"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Signup() {
-  router
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Início</Text>
