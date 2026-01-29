@@ -16,7 +16,13 @@ export default function Signup() {
 
       <TouchableOpacity style={styles.button} onPress={() => { router.navigate('./sign-up') }} >
         <Text style={styles.label}>
-          Navegar sem tag Link
+          Navegar com Navigate
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => { router.replace('./sign-up') }} >
+        <Text style={styles.label}>
+          Navegar com replace
         </Text>
       </TouchableOpacity>
     </View>
@@ -35,6 +41,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
     paddingHorizontal: 32,
     paddingVertical: 10,
-    borderRadius: 10
+    borderRadius: 10,
+    marginVertical: 5
   }
 })

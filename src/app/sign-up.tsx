@@ -1,7 +1,13 @@
 import { Link, router } from "expo-router"
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Signup() {
+  function handleBack() {
+    if (!router.canGoBack()) {
+      Alert.alert("Erro", "Não é possível voltar")
+    }
+    router.back()
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Conta</Text>
@@ -9,7 +15,7 @@ export default function Signup() {
         Voltar
       </Link>
 
-      <TouchableOpacity style={styles.button} onPress={() => { router.back() }} >
+      <TouchableOpacity style={styles.button} onPress={handleBack} >
         <Text style={styles.label}>
           Voltar sem Tag link
         </Text>
@@ -29,6 +35,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#000",
     paddingHorizontal: 32,
+    marginVertical: 5,
     paddingVertical: 10,
     borderRadius: 10
   }
