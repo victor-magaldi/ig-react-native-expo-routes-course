@@ -1,7 +1,8 @@
-import { Link, router } from "expo-router"
+import { Link, router, useLocalSearchParams } from "expo-router"
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 export default function Signup() {
+  const { name } = useLocalSearchParams()
   function handleBack() {
     if (!router.canGoBack()) {
       Alert.alert("Erro", "Não é possível voltar")
@@ -10,6 +11,7 @@ export default function Signup() {
   }
   return (
     <View style={styles.container}>
+      <Text>{name}</Text>
       <Text style={styles.title}>Conta</Text>
       <Link href={'./'}>
         Voltar

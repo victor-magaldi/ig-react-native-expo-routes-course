@@ -25,6 +25,10 @@ export default function Signup() {
           Navegar com replace
         </Text>
       </TouchableOpacity>
+
+      <Link href={{ pathname: "/sign-up", params: { name: "Victor" } }}>
+        Enviar Parâmetro
+      </Link>
     </View>
   )
 }
