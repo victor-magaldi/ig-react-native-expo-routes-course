@@ -26,8 +26,12 @@ export default function Signup() {
         </Text>
       </TouchableOpacity>
 
-      <Link href={{ pathname: "/sign-up", params: { name: "Victor" } }}>
+      <Link style={styles.link} href={{ pathname: "./sign-up", params: { name: "Victor" } }}>
         Enviar Parâmetro
+      </Link>
+
+      <Link style={styles.link} href={{ pathname: "./product/99" }}>
+        Abrir Produto
       </Link>
     </View>
   )
@@ -43,6 +47,14 @@ const styles = StyleSheet.create({
   label: { fontSize: 16, fontWeight: "bold", color: "#FFF" },
   button: {
     backgroundColor: "#000",
+    paddingHorizontal: 32,
+    paddingVertical: 10,
+    borderRadius: 10,
+    marginVertical: 5
+  },
+  link: {
+    backgroundColor: "#000",
+    color: "#FFF",
     paddingHorizontal: 32,
     paddingVertical: 10,
     borderRadius: 10,
