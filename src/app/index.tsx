@@ -33,6 +33,13 @@ export default function Signup() {
       <Link style={styles.link} href={{ pathname: "./product/99" }}>
         Abrir Produto
       </Link>
+
+      <Link style={styles.link} href={{ pathname: "./home", params: { authenticated: "true" } }}>
+        Ir para Home Autenticado
+      </Link>
+      <Link style={styles.link} href={{ pathname: "./home", params: {} }}>
+        Ir para Home Não Autenticado
+      </Link>
     </View>
   )
 }
